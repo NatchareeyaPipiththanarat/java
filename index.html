@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <script>
+        function display(){
+           document.getElementById("myusername").innerHTML = document.getElementById("username").value + "'s Gallery"
+        }
+        function setImage(){
+            document.getElementById("profile").style.backgroundImage = "url(" + document.getElementById("image_url").value + ")";
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="flex-top">
+            <div>
+                <div class="flex-item1">
+                    <!--avatar-->
+                    <div class="avatar" id="profile"></div>
+                    <div class="noti">2</div>
+                </div>
+                <div>
+                    <a href="https://www.google.com/" class="inhover">
+                    <p style="font-family: sans-serif; font-weight: bold;" id="myusername"> username, gallery</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-item2">
+                <!--input-->
+                <div><label>Username</label><input type="text" style="margin-left: 5px; margin-right: 5px;" id="username"><button 
+                    style="margin-left: 5px;" onclick="display()">set</button></div>
+                <div><label>ImageURL</label><input type="text" style="margin-left: 5px; margin-right: 5px;" id="image_url"><button 
+                    style="margin-left: 5px;" onclick="setImage()">set</button></div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item" style="background-image: url(pic4.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic5.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic10.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic2.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic8.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic7.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic3.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic9.jpg); background-size: 350px;"></div>
+            <div class="gallery-item" style="background-image: url(pic1.jpg); background-size: 350px;"></div>
+        </div>
+    </div>
+</body>
+</html>
